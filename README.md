@@ -13,3 +13,5 @@ A Senior Software Engineer working with [@bbc](https://www.github.com/bbc) on Al
 ### Languages, Platforms and Tooling
 
 [![My Skills](https://skillicons.dev/icons?i=js,aws,bash,css,docker,gcp,git,github,html,jenkins,jest,linux,nodejs,postman,ts,vscode&perline=8)](https://skillicons.dev)
+
+![GitHub stats](./stats.svg)
