@@ -18,6 +18,7 @@ const extensionRE = /(?:\.([^.]+))?$/;
 const extensionList = new Map([
   ["ts", "TypeScript"],
   ["json", "JSON"],
+  ["md", "MarkDown"],
 ]);
 
 interface Langauges {
@@ -28,7 +29,6 @@ interface RepoStats {
   totalCommits: number;
   additions: number;
   deletions: number;
-  commitIds: string[];
   languages: Langauges;
 }
 
@@ -36,7 +36,6 @@ const repoStats: RepoStats = {
   totalCommits: 0,
   additions: 0,
   deletions: 0,
-  commitIds: [],
   languages: {},
 };
 
@@ -75,10 +74,13 @@ const getFilesInCommit = async (owner: string, repo: string, ref: string) => {
   const date = new Date();
   date.setMonth(date.getMonth() - 1);
 
-  const { owner, name, branch } = repoList[0];
+  await Promise.all(
+    repoList.map(async (repo) => {
+      const { owner, name, branch } = repo;
+      const commitIds: string[] = [];
 
-  const result: RepositoryNode = await graphqlWithAuth(
-    `
+      const result: RepositoryNode = await graphqlWithAuth(
+        `
     query repoStats($name: String!, $owner: String!, $branch: String!, $since: GitTimestamp!, $authorId: ID!) {
       repository(name: $name, owner: $owner) {
         ref(qualifiedName: $branch) {
@@ -102,41 +104,43 @@ const getFilesInCommit = async (owner: string, repo: string, ref: string) => {
       }
     }
   `,
-    {
-      owner,
-      branch,
-      name,
-      since: date.toISOString(),
-      authorId: process.env.AUTHORID,
-    }
-  );
-
-  if (result) {
-    const target = result.repository.ref?.target as Commit;
-    const nodes = target.history.nodes as Commit[];
-
-    nodes.forEach((node) => {
-      repoStats.totalCommits++;
-      repoStats.additions += node.additions;
-      repoStats.deletions += node.deletions;
-      repoStats.commitIds.push(node.oid);
-    });
-
-    if (repoStats.commitIds) {
-      const fileList = await Promise.all(
-        repoStats.commitIds.map(async (commit) => {
-          return await getFilesInCommit(owner, name, commit);
-        })
+        {
+          owner,
+          branch,
+          name,
+          since: date.toISOString(),
+          authorId: process.env.AUTHORID,
+        }
       );
 
-      const flatFileList = fileList.flat();
+      if (result) {
+        const target = result.repository.ref?.target as Commit;
+        const nodes = target.history.nodes as Commit[];
 
-      for (let i = 0; i < flatFileList.length; i++) {
-        repoStats.languages[flatFileList[i] as string] =
-          repoStats.languages[flatFileList[i] as string] + 1 || 1;
+        nodes.forEach((node) => {
+          repoStats.totalCommits++;
+          repoStats.additions += node.additions;
+          repoStats.deletions += node.deletions;
+          commitIds.push(node.oid);
+        });
+
+        if (commitIds) {
+          const fileList = await Promise.all(
+            commitIds.map(async (commit) => {
+              return await getFilesInCommit(owner, name, commit);
+            })
+          );
+
+          const flatFileList = fileList.flat();
+
+          for (let i = 0; i < flatFileList.length; i++) {
+            repoStats.languages[flatFileList[i] as string] =
+              repoStats.languages[flatFileList[i] as string] + 1 || 1;
+          }
+        }
       }
-    }
-  }
+    })
+  );
 
   console.log(repoStats);
 })();
