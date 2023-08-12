@@ -19,6 +19,15 @@ const extensionList = new Map([
   ["ts", "TypeScript"],
   ["json", "JSON"],
   ["md", "MarkDown"],
+  ["js", "JavaScript"],
+  ["editorconfig", "Config"],
+  ["eslintignore", "Ignore"],
+  ["npmignore", "Ignore"],
+  ["gitignore", "Ignore"],
+  ["nvmrc", "Config"],
+  ["prettierrc", "Config"],
+  ["lintstagedrc", "Config"],
+  ["github/CODEOWNERS", "Config"],
 ]);
 
 interface Langauges {
