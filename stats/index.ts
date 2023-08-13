@@ -1,7 +1,8 @@
+import { Octokit } from "@octokit/core";
 import { graphql } from "@octokit/graphql";
 import { Commit, RepositoryNode } from "@octokit/graphql-schema";
+import { readFileSync, writeFileSync } from "fs";
 import repoList from "./repoList.json";
-import { Octokit } from "@octokit/core";
 
 const graphqlWithAuth = graphql.defaults({
   headers: {
@@ -35,16 +36,20 @@ interface Langauges {
 }
 
 interface RepoStats {
+  totalRepos: number;
   totalCommits: number;
   additions: number;
   deletions: number;
+  totalFiles: number;
   languages: Langauges;
 }
 
 const repoStats: RepoStats = {
+  totalRepos: 0,
   totalCommits: 0,
   additions: 0,
   deletions: 0,
+  totalFiles: 0,
   languages: {},
 };
 
@@ -83,6 +88,7 @@ const getFilesInCommit = async (owner: string, repo: string, ref: string) => {
   const date = new Date();
   date.setMonth(date.getMonth() - 1);
 
+  // Get commits from last month
   await Promise.all(
     repoList.map(async (repo) => {
       const { owner, name, branch } = repo;
@@ -123,6 +129,7 @@ const getFilesInCommit = async (owner: string, repo: string, ref: string) => {
       );
 
       if (result) {
+        repoStats.totalRepos++;
         const target = result.repository.ref?.target as Commit;
         const nodes = target.history.nodes as Commit[];
 
@@ -133,6 +140,7 @@ const getFilesInCommit = async (owner: string, repo: string, ref: string) => {
           commitIds.push(node.oid);
         });
 
+        // Use commit ids to retrieve file extensions and map to type
         if (commitIds) {
           const fileList = await Promise.all(
             commitIds.map(async (commit) => {
@@ -143,6 +151,7 @@ const getFilesInCommit = async (owner: string, repo: string, ref: string) => {
           const flatFileList = fileList.flat();
 
           for (let i = 0; i < flatFileList.length; i++) {
+            repoStats.totalFiles++;
             repoStats.languages[flatFileList[i] as string] =
               repoStats.languages[flatFileList[i] as string] + 1 || 1;
           }
@@ -152,4 +161,45 @@ const getFilesInCommit = async (owner: string, repo: string, ref: string) => {
   );
 
   console.log(repoStats);
+
+  // Generate SVG
+  let svg = readFileSync("./template.svg").toString();
+  let languageList = "";
+  let yPos = 57;
+  let index = 0;
+  const colours = ["005F73", "94D2BD", "E9D8A6", "CA6702", "AE2012", "9B2226"];
+
+  const sortedList = Object.entries(repoStats.languages).sort(
+    ([, a], [, b]) => b - a
+  );
+
+  for (const [lang, count] of Object.entries(repoStats.languages)) {
+    languageList += `
+    <g transform="translate(415, ${yPos})">
+        <text x="0" y="12.5">${lang}</text>
+        <line class="bar" x1="87" y1="8" x2="${(
+          93 +
+          (224 * count) / sortedList[0][1]
+        ).toFixed(1)}" y2="8" stroke="#${colours[index]}" />
+        <text x="382" y="12.5" text-anchor="end">${(
+          (count / repoStats.totalFiles) *
+          100
+        ).toFixed(1)}%</text>
+    </g>
+    `;
+
+    yPos += 24;
+    index++;
+  }
+
+  svg = svg
+    .replace("{TOTALCOMMITS}", repoStats.totalCommits.toString())
+    .replace("{TOTALADDITIONS}", repoStats.additions.toString())
+    .replace("{TOTALDELETIONS}", repoStats.deletions.toString())
+    .replace("{TOTALREPOS}", repoStats.totalRepos.toString())
+    .replace("{LANGUAGELIST}", languageList);
+
+  writeFileSync("./output.svg", svg);
+
+  console.log("Done");
 })();
