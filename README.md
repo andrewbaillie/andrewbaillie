@@ -3,6 +3,7 @@
 A Senior Software Engineer working with [@bbc](https://www.github.com/bbc) on Alexa skills and Synthetic Media. If you want to chat, get me on [LinkedIn](https://www.linkedin.com/in/andrew-baillie-3b50b239/).
 
 ### I’m currently working on:
+
 - The [Interactive News](https://www.amazon.co.uk/dp/B0957KX2C4) skill on Alexa devices
 - Synthetic media including:
   - Generation of localised weather forecasts 4 times a day for every postcode in the UK
@@ -14,4 +15,4 @@ A Senior Software Engineer working with [@bbc](https://www.github.com/bbc) on Al
 
 [![My Skills](https://skillicons.dev/icons?i=js,aws,bash,css,docker,gcp,git,github,html,jenkins,jest,linux,nodejs,postman,ts,vscode&perline=8)](https://skillicons.dev)
 
-![GitHub stats](./stats.svg)
+![GitHub stats](./stats/output.svg)
