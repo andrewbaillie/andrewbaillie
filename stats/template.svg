@@ -1,0 +1,83 @@
+<!-- 
+    SVG by https://github.com/staticintlucas/readme-stats
+-->
+<svg width="822" height="215" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        :root {
+            --bg-color: #f4f6f8;
+            --border-color: #d0d7de;
+            --text-color: #24292f;
+            --grey-text-color: #57606a;
+
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            --font-size: 14px;
+            --line-height: 1.5;
+            --bold-font-size: 18px;
+            --bold-font-weight: 600;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #171b22;
+                --border-color: #30363d;
+                --text-color: #c9d1d9;
+                --grey-text-color: #8b949e;
+            }
+        }
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-color: #f4f6f8;
+                --border-color: #d0d7de;
+                --text-color: #24292f;
+                --grey-text-color: #57606a;
+            }
+        }
+        rect#bg, line#sep {
+            fill: var(--bg-color);
+            stroke: var(--border-color);
+        }
+        text, path {
+            fill: var(--text-color);
+        }
+        text {
+            text-rendering: optimizeLegibility;
+            font: var(--font-size) var(--font-family);
+        }
+        text.heading {
+            font-weight: var(--bold-font-weight);
+            font-size: var(--bold-font-size);
+        }
+        line.bar {
+            stroke-width: 8;
+            stroke-linecap: round;
+        }
+    </style>
+    <rect id="bg" x="0.5" y="0.5" width="821" height="214" stroke-width="1" rx="6" ry="6" />
+    <line id="sep" x1="391.5" y1="0" x2="391.5" y2="214" stroke-width="1" />
+
+    <g transform="translate(24, 20)">
+        <text class="heading" x="0" y="18">GitHub Stats</text>
+    </g>
+    <g transform="translate(24, 57)">
+        <text x="0" y="12.5">Commits</text>
+        <text x="343" y="12.5" text-anchor="end">{TOTALCOMMITS}</text>
+    </g>
+    <g transform="translate(24, 81)">
+        <text x="0" y="12.5">Additions</text>
+        <text x="343" y="12.5" text-anchor="end">{TOTALADDITIONS}</text>
+    </g>
+    <g transform="translate(24, 105)">
+        <text x="0" y="12.5">Deletions</text>
+        <text x="343" y="12.5" text-anchor="end">{TOTALDELETIONS}</text>
+    </g>
+    <g transform="translate(24, 129)">
+        <text x="0" y="12.5">Repos</text>
+        <text x="343" y="12.5" text-anchor="end">{TOTALREPOS}</text>
+    </g>
+
+    <g transform="translate(415, 20)">
+        <text class="heading" x="0" y="18">Most Used Languages (Last 30 Days)</text>
+    </g>
+    
+   {LANGUAGELIST}
+    
+</svg>
