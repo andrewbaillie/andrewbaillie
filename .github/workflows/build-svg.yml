@@ -34,3 +34,7 @@ jobs:
         message: 'Updated SVG stats output (Github Action)'
         add: 'stats/output.svg'
         new_branch: 'update-svg'
+    - name: Create PR
+      run: gh pr create --base 'main' --head 'update-svg' --title 'Updates Stats SVG from Github Actions' --body 'Created by Github action'
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
