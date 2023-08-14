@@ -15,6 +15,7 @@ jobs:
       with:
         node-version: 18.x
         cache: 'npm'
+        cache-dependency-path: './stats/package-lock.json'
     - name: Install and Generate
       working-directory: ./stats
       run: |
