@@ -26,5 +26,8 @@ jobs:
         npm install
         npm start
     - name: Finish
-      run: |
-        git status
+      uses: EndBug/add-and-commit@v9
+      with: 
+        message: 'Updated SVG stats output (Github Action)'
+        add: 'stats/output.svg'
+        
