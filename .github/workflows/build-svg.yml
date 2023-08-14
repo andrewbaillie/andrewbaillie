@@ -7,6 +7,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
     
     steps:
     - uses: actions/checkout@v3
@@ -30,4 +33,4 @@ jobs:
       with: 
         message: 'Updated SVG stats output (Github Action)'
         add: 'stats/output.svg'
-        
+        new_branch: 'update-svg'
