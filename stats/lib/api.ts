@@ -8,7 +8,8 @@ const extensionRE = /(?:\.([^.]+))?$/;
 
 const extensionList = new Map([
   ["ts", "TypeScript"],
-  ["json", "JSON"],
+  ["json", "JSON/YML"],
+  ["yml", "JSON/YML"],
   ["md", "MarkDown"],
   ["js", "JavaScript"],
   ["editorconfig", "Config"],
