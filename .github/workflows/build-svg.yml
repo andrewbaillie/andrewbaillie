@@ -18,6 +18,9 @@ jobs:
         cache-dependency-path: './stats/package-lock.json'
     - name: Install and Generate
       working-directory: ./stats
+      env:
+        TOKEN: ${{ secrets.TOKEN }}
+        AUTHORID: ${{ secrets.AUTHORID }}
       run: |
         npm install
-        # npm start
+        npm start
