@@ -7,6 +7,10 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
     
     steps:
     - uses: actions/checkout@v3
@@ -25,3 +29,13 @@ jobs:
       run: |
         npm install
         npm start
+    - name: Finish
+      uses: EndBug/add-and-commit@v9
+      with: 
+        message: 'Updated SVG stats output (Github Action)'
+        add: 'stats/output.svg'
+        new_branch: 'update-svg'
+    - name: Create PR
+      run: gh pr create --base 'main' --head 'update-svg' --title 'Updates Stats SVG from Github Actions' --body 'Created by Github action'
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
