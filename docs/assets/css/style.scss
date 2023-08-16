@@ -3,8 +3,17 @@
 
 @import "{{ site.theme }}";
 
-audio {
-    margin: -10px 0 0 40px;
+
+figure {
+    margin-top: -10px;
+
+    figcaption {
+        font-style: italic;
+        margin-bottom: 5px;
+    }
+    audio { 
+        width: 100%;
+    }
 }
 
 header {

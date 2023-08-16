@@ -26,10 +26,15 @@ Joined the BBC in 2018 as an opportunity to improve myself and try new tech that
 - Working with the [BBC's Synthetic Voice](https://www.bbc.co.uk/mediacentre/worldnews/2020/life-project) created a pilot for the playback of Portuguese language Brazilian news articles.
 - Using the same synthetic voice produced a pipeline generating 12,000 weather forecasts every day, these where used in both the [Interactive News Alexa Skill](https://voicebot.ai/2019/10/23/bbc-launches-interactive-news-service-for-alexa/) and the [BBC's Weather app](https://www.bbc.co.uk/weather/articles/c7219x55vygo).
 
-<audio controls>
-  <source src="./assets/audio/weather-forecast-1.mp3" type="audio/ogg">
-    Your browser does not support the audio element.
-</audio>
+<figure>
+  <figcaption>Afternoon forecast for ML3:</figcaption>
+  <audio controls src="./assets/audio/weather-forecast-1.mp3"></audio>
+</figure>
+
+<figure>
+  <figcaption>Morning forecast for SW1A:</figcaption>
+  <audio controls src="./assets/audio/weather-forecast-2.mp3"></audio>
+</figure>
 
 - Mentored junior members of staff from 2019 onwards, which helped one person move from a Testing role to Software Engineering.
 
