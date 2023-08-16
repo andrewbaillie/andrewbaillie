@@ -1,0 +1,12 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+audio {
+    margin: -10px 0 0 40px;
+}
+
+header {
+    h1, p.view { display: none; }
+}
