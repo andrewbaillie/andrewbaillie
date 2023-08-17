@@ -1,6 +1,6 @@
 # Andrew Baillie
 
-#### Senior software engineer based in Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿
+#### Senior Software Engineer based in Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿
 
 [📧 Email](mailto:andrewbaillie@me.com) &nbsp; 
 [👨‍💻 LinkedIn](https://www.linkedin.com/in/andrew-baillie-3b50b239/) &nbsp; 
@@ -10,7 +10,6 @@
 
 **Bachelor of Science in Science Studies (Computer Science)** from [Strathclyde University](https://www.strath.ac.uk/) (2002-2005)<br/>
 Subjects included: Maths, Systems analysis and design, Algorithms and complexity, Databases, Human computer interaction, Group project, Individual project
-
 
 ---
 
@@ -22,9 +21,17 @@ Subjects included: Maths, Systems analysis and design, Algorithms and complexity
 Joined the BBC in 2018 as an opportunity to improve myself and try new tech that I wasn't getting exposure to working in web development.
 
 - Built an analytics pipeline for the ingestion of data from a new [Voice product](https://voicebot.ai/2020/06/02/bbc-voice-assistant-beeb-launches-in-beta-in-the-uk/) that was being built in the same department.
-- Expanded that pipeline to support ingestion from multiple sources including [Alexa devices](https://www.amazon.co.uk/dp/B0957KX2C4) and Rest APIs.
-- Working with the [BBC's Synthetic Voice](https://www.bbc.co.uk/mediacentre/worldnews/2020/life-project) created a pilot for the playback of Portuguese language Brazilian news articles.
-- Using the same synthetic voice produced a pipeline generating 12,000 weather forecasts every day, these where used in both the [Interactive News Alexa Skill](https://voicebot.ai/2019/10/23/bbc-launches-interactive-news-service-for-alexa/) and the [BBC's Weather app](https://www.bbc.co.uk/weather/articles/c7219x55vygo).
+    - Expanded this to support ingestion from multiple sources including [Alexa devices](https://www.amazon.co.uk/dp/B0957KX2C4) and Rest APIs.
+    - Between June 2022 and August 2023 the pipeline ingested more than 1.1 Billion records and more than 1.1TB of data.
+
+- Improved the [Interactive News Alexa Skill](https://voicebot.ai/2019/10/23/bbc-launches-interactive-news-service-for-alexa/) to increase the number of users with a linked account to 20%
+    - Added local news and weather forecasts for users with linked BBC accounts
+    - Reached a peak of 175k unique users in a day
+    - The skill handled a peak demand of ~64k Lambda invocations in a minute.
+
+- Using the [BBC's Synthetic Voice](https://www.bbc.co.uk/mediacentre/worldnews/2020/life-project) produced a pipeline generating 12,000 weather forecasts every day, these where used in both the [Interactive News Alexa Skill](https://voicebot.ai/2019/10/23/bbc-launches-interactive-news-service-for-alexa/) and the [BBC's Weather app](https://www.bbc.co.uk/weather/articles/c7219x55vygo).
+    - On Alexa devices it achieved more than 3 million playbacks of the forecast, with a completition rate of &gt; 97%, reaching 95% of the UK's postcodes.
+    - On the Weather app we reached approximately 400k accounts.
 
 <figure>
   <figcaption>Afternoon forecast for ML3:</figcaption>
@@ -36,6 +43,7 @@ Joined the BBC in 2018 as an opportunity to improve myself and try new tech that
   <audio controls src="./assets/audio/weather-forecast-2.mp3"></audio>
 </figure>
 
+- Working with the synthetic voice created a pilot for the playback of Portuguese language Brazilian news articles.
 - Mentoring junior members of staff from 2019 onwards, which helped one person move from a Testing role to Software Engineering.
 
 <br/>
@@ -53,7 +61,7 @@ the needs of the company.
 
 ---
 
-## Courses and Training
+## 🧑‍🏫 Courses and Training
 **Data Protection Enhanced** (July 2023)<br/>
 **Threat Modelling** (February 2022)<br/>
 **Architecting on AWS** (October 2019)<br/>
@@ -64,5 +72,5 @@ the needs of the company.
 
 ## 🤹 Skills
 
-**Proficient:** TypeScript, JavaScript, Alexa, AWS (*API Gateway, CDK, CloudFront, CloudWatch, CodePipeline, Kinesis, Lambda, SNS, SQS, S3, Step Functions*), GCP (BigQuery, Cloud SQL, Cloud Storage, Compute Engine)<br/>
-**Familiar:** PHP, MySQL, HTML5, CSS, Linux, AWS, GCP, Azure
+**Proficient:** TypeScript, JavaScript, Alexa (*ASK*), AWS (*API Gateway, CDK, CloudFront, CodePipeline, Kinesis, Lambda, SNS, SQS, S3, Step Functions*), GCP (*BigQuery, Cloud SQL, Cloud Storage, Compute Engine*)<br/>
+**Familiar:** Python, Docker, PHP, MySQL, HTML5, CSS, Linux, AWS, GCP, Azure
