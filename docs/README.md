@@ -21,8 +21,12 @@ Subjects included: Maths, Systems analysis and design, Algorithms and complexity
 Joined the BBC in 2018 as an opportunity to improve myself and try new tech that I wasn't getting exposure to working in web development.
 
 - Built an analytics pipeline for the ingestion of data from a new [Voice product](https://voicebot.ai/2020/06/02/bbc-voice-assistant-beeb-launches-in-beta-in-the-uk/) that was being built in the same department.
+    - We ingested two basic types of data: non-sensitive and sensitive. Non-sensative data could be timing metrics, or button clicks. Sensitive data included voice utterances from the user, this required increase security and specific access requirements, essentially this was treated in the same way a journalists sources would be.
     - Expanded this to support ingestion from multiple sources including [Alexa devices](https://www.amazon.co.uk/dp/B0957KX2C4) and Rest APIs.
     - Between June 2022 and August 2023 the pipeline ingested more than 1.1 Billion records and more than 1.1TB of data.
+
+- Lead the work researching various business intelligence tools to find one suitable for our needs, later lead the implementation of the selected tool in our cloud platform.
+    - Had to take various factors into consideratio such as procurement, cost, licensing and legal restictions as well as the technical requirements we had such as database support, access controls, visualisation, ease of use.
 
 - Improved the [Interactive News Alexa Skill](https://voicebot.ai/2019/10/23/bbc-launches-interactive-news-service-for-alexa/) to increase the number of users with a linked account to 20%
     - Added local news and weather forecasts for users with linked BBC accounts
