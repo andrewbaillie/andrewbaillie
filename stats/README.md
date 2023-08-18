@@ -15,7 +15,7 @@ query {
 }
 ```
 
-- A list of repos you want to gather stats from, this is an array of javascript objects in a file named `repoList.json`.
+- A list of repos you want to gather stats from, this is a stringified object passed in an environment variable called `REPOLIST`.
 
 ```json
 [
@@ -36,5 +36,5 @@ Run `npm install` from this directory to install the required packages.
 To gather your stats run the following command:
 
 ```bash
-❯ TOKEN=<your github pat> AUTHORID=<your github user id> npm start
+❯ TOKEN=<your github pat> AUTHORID=<your github user id> REPOLIST=<your repo list> npm start
 ```
