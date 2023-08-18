@@ -29,7 +29,7 @@ Joined the BBC in 2018 as an opportunity to improve myself and try new tech that
     - Reached a peak of 175k unique users in a day
     - The skill handled a peak demand of ~64k Lambda invocations in a minute.
 
-- Using the [BBC's Synthetic Voice](https://www.bbc.co.uk/mediacentre/worldnews/2020/life-project) produced a pipeline generating 12,000 weather forecasts every day, these where used in both the [Interactive News Alexa Skill](https://voicebot.ai/2019/10/23/bbc-launches-interactive-news-service-for-alexa/) and the [BBC's Weather app](https://www.bbc.co.uk/weather/articles/c7219x55vygo).
+- Using the [BBC's Synthetic Voice](https://www.bbc.co.uk/mediacentre/worldnews/2020/life-project) produced a pipeline generating 12,000 weather forecasts every day, these were used in both the [Interactive News Alexa Skill](https://voicebot.ai/2019/10/23/bbc-launches-interactive-news-service-for-alexa/) and the [BBC's Weather app](https://www.bbc.co.uk/weather/articles/c7219x55vygo).
     - On Alexa devices it achieved more than 3 million playbacks of the forecast, with a completition rate of &gt; 97%, reaching 95% of the UK's postcodes.
     - On the Weather app we reached approximately 400k accounts.
 
@@ -61,6 +61,13 @@ the needs of the company.
 
 ---
 
+## 🤹 Skills
+
+**Proficient:** TypeScript, JavaScript, Alexa (*ASK*), AWS (*API Gateway, CDK, CloudFront, CodePipeline, Kinesis, Lambda, SNS, SQS, S3, Step Functions*), GCP (*BigQuery, Cloud SQL, Cloud Storage, Compute Engine*)<br/>
+**Familiar:** Python, Docker, PHP, MySQL, HTML5, CSS, Botium, Metabase, GraphQL, Linux, AWS, GCP, Azure
+
+---
+
 ## 🧑‍🏫 Courses and Training
 **Data Protection Enhanced** (July 2023)<br/>
 **Threat Modelling** (February 2022)<br/>
@@ -70,7 +77,8 @@ the needs of the company.
 
 ---
 
-## 🤹 Skills
+## 🏆 Acheivements
 
-**Proficient:** TypeScript, JavaScript, Alexa (*ASK*), AWS (*API Gateway, CDK, CloudFront, CodePipeline, Kinesis, Lambda, SNS, SQS, S3, Step Functions*), GCP (*BigQuery, Cloud SQL, Cloud Storage, Compute Engine*)<br/>
-**Familiar:** Python, Docker, PHP, MySQL, HTML5, CSS, Linux, AWS, GCP, Azure
+- Won a round of [Really Boring Game](https://really.boring.website/) against my team
+- Completed the 2013 Edinburgh Half Marathan (just)
+- Completed the 2019 5K Rough Runner
