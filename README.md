@@ -1,6 +1,6 @@
 ## Hi there 👋, I'm Andrew
 
-A Senior Software Engineer who previsouly worked with [@bbc](https://www.github.com/bbc) on Alexa skills and Synthetic Media.
+A Senior Software Engineer who previously worked with [@bbc](https://www.github.com/bbc) on Alexa skills and Synthetic Media.
 
 ### At the BBC I worked on:
 
@@ -10,7 +10,7 @@ A Senior Software Engineer who previsouly worked with [@bbc](https://www.github.
   - Portuguese language audio articles for the Brazilian News market
 - Insights analytics pipeline for primarily the [Interactive News](https://www.amazon.co.uk/dp/B0957KX2C4) skill
   - Handles the ingest, storage and analysis of data from the skill
-  - Shuffling PIDs around
+- Shuffling PIDs around
 
 ### Languages, Platforms and Tooling
 
