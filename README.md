@@ -1,8 +1,8 @@
 ## Hi there 👋, I'm Andrew
 
-A Senior Software Engineer working with [@bbc](https://www.github.com/bbc) on Alexa skills and Synthetic Media. If you want to chat, get me on [LinkedIn](https://www.linkedin.com/in/andrew-baillie-3b50b239/).
+A Senior Software Engineer who previsouly worked with [@bbc](https://www.github.com/bbc) on Alexa skills and Synthetic Media.
 
-### I’m currently working on:
+### At the BBC I worked on:
 
 - The [Interactive News](https://www.amazon.co.uk/dp/B0957KX2C4) skill on Alexa devices
 - Synthetic media including:
@@ -10,6 +10,7 @@ A Senior Software Engineer working with [@bbc](https://www.github.com/bbc) on Al
   - Portuguese language audio articles for the Brazilian News market
 - Insights analytics pipeline for primarily the [Interactive News](https://www.amazon.co.uk/dp/B0957KX2C4) skill
   - Handles the ingest, storage and analysis of data from the skill
+  - Shuffling PIDs around
 
 ### Languages, Platforms and Tooling
 
