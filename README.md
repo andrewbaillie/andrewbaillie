@@ -1,6 +1,6 @@
 ## Hi there 👋, I'm Andrew
 
-A Senior Software Engineer who previously worked with [@bbc](https://www.github.com/bbc) on Alexa skills and Synthetic Media.
+A Senior Software Engineer who currently works for [@vocovo](https://www.vocovo.com/en-GB) on voice technology. Previously worked with [@bbc](https://www.github.com/bbc) on Alexa skills and Synthetic Media.
 
 ### At the BBC I worked on:
 
@@ -14,6 +14,4 @@ A Senior Software Engineer who previously worked with [@bbc](https://www.github.
 
 ### Languages, Platforms and Tooling
 
-[![My Skills](https://skillicons.dev/icons?i=js,aws,bash,css,docker,gcp,git,github,html,jenkins,jest,linux,nodejs,postman,ts,vscode&perline=8)](https://skillicons.dev)
-
-![GitHub stats](./stats/output.svg)
+[![My Skills](https://skillicons.dev/icons?i=js,aws,bash,css,docker,gcp,git,github,html,jenkins,jest,linux,nodejs,postman,ts,vscode,azure,githubactions,pnpm,redis&perline=8)](https://skillicons.dev)
